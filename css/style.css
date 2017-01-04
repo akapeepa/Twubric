@@ -1,0 +1,17 @@
+
+.fit-parent-width {
+	width: 100%;
+}
+
+.card-layout {
+	width: 550px;
+	padding-right: 10px;
+}
+
+.container-width {
+	width: 1000px;
+}
+
+.remove-button {
+	float: right;
+}

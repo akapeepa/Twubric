@@ -1,0 +1,62 @@
+<div class="row">
+  <h3>Sort By</h3>
+  <div id="sorts" class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <button type="button" id="total" class="btn btn-info" data-sort-by="total">Twubric Score</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" id="friends" class="btn btn-info" data-sort-by="friends" >Friends</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" id="influence" class="btn btn-info" data-sort-by="influence" >Influence</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" id="chirpiness" class="btn btn-info" data-sort-by="chirpiness">Chirpiness</button>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<h3>Joined Twitter Between</h3>
+<div class="row">
+  <div id="date" class="col-md-12" role="group" >
+    <input type="text" class="col-md-6" id="startDate" placeholder="Start Date"/>
+    <input type="text" class="col-md-6" id="endDate" placeholder="End Date"/>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="isotope container col-md-12">
+  <div class="card-item card-layout" ng-repeat="i in dataInfo" ng-cloak>
+    <div class="panel panel-info">
+      <div class="panel-heading clearfix">
+        <ul class="list-inline col-md-12">
+          <li class="fullname col-md-10" ng-cloak><h4>{{i.fullname}}</h4></li>
+          <li class="total col-md-2" ng-cloak><h4 align="right">{{i.twubric.total}}</h4></li>
+        </ul>
+      </div>
+      <div class="list-group">
+        <div class="list-group-item">
+          <table class="fit-parent-width">
+            <tbody>
+              <tr>
+                <td align="center" ng-cloak><p>CHIRPINESS</p><div class="chirpiness" align="center">{{i.twubric.chirpiness}}</div></td>
+                <td align="center" ng-cloak><p>FRIENDS</p><div class="friends" align="center">{{i.twubric.friends}}</div></td>
+                <td align="center" ng-cloak><p>INFLUENCE</p><div class="influence" align="center">{{i.twubric.influence}}</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <ul class="list-inline">
+          <li><p class="joinDate" ng-cloak><i>{{i.join_date * 1000 | date}}</i></p></li>
+          <li class="remove-button"><button class="btn btn-danger" id="removeCard"><i class="fa fa-trash-o fa-2x"></i></button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
