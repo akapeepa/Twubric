@@ -1,17 +1,26 @@
-
-.fit-parent-width {
-	width: 100%;
+#sort-container {
+	margin: 30px 0px;
 }
-
-.card-layout {
-	width: 550px;
-	padding-right: 10px;
+#date-filter-container {
+	margin: 30px 0px;
 }
-
-.container-width {
-	width: 1000px;
+.delete-button-color {
+	color: #DB5353;
 }
-
-.remove-button {
-	float: right;
+.delete-button-color:hover {
+	color: #E57777;
+}
+.number {
+	font-size: 18px;
+	font-weight: lighter;
+	color: #A89A9A;
+}
+.type {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.heading p{
+	font-size: 20px;
+	font-weight: 300;
+	margin: 0px;
 }

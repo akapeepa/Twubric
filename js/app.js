@@ -24,7 +24,7 @@ twubric.directive('twubric', function() {
       var $container = $('.isotope').isotope(options);
 
       scope.$watch('dataInfo', function(newVal, oldVal) {
-        $container.isotope('reloadItems').isotope({ sortBy: 'original-order' });      
+        $container.isotope('reloadItems').isotope({ sortBy: 'original-order' });
         $('#startDate').datepicker("setDate", "Jan 1, 2008");
         $('#endDate').datepicker("setDate", "Jan 1, 2013");
         $('#endDate').datepicker({
